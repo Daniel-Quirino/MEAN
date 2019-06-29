@@ -6,15 +6,14 @@ import { NgForm } from "@angular/forms";
   templateUrl: "./post-create.component.html"
 })
 export class PostCreateComponent {
-  enteredTitle = "";
-  enteredContent = "";
-
   constructor() {}
 
-  onAddPost(form: NgForm) {
-    if (form.invalid) {
-      return;
-    }
-    
+  enteredValue = "";
+  newPost = '';
+
+  onAddPost() {
+    this.newPost = this.enteredValue;
   }
+    
 }
+
